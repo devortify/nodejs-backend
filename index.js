@@ -23,6 +23,7 @@ app.use('/api/v1/todo',todoRoutes);
 
 
 // Connecting MongooseDatabase
+mongoose.set("strictQuery", false);
 mongoose.connect(DATABASE_URL,{useNewUrlParser: true})
 .then(()=>{
     console.log("Database connected successfully");
